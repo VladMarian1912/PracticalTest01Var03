@@ -32,6 +32,10 @@ public class PracticalTest01Var03MainActivity extends AppCompatActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.d("main", intent.getStringExtra("message"));
+            if(intent.getAction().equals("ro.pub.cs.systems.eim.suma")) {
+                String str = intent.getStringExtra("message");
+                Toast.makeText(getApplicationContext(), str, Toast.LENGTH_LONG).show();
+            }
         }
     }
 
